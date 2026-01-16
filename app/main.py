@@ -1,7 +1,8 @@
-from fastapi import Body, FastAPI
+from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from starlette.responses import FileResponse
 from app.users import router as users_router
+from app.chat import router as chat_router
 
 app = FastAPI()
 
@@ -27,8 +28,5 @@ def hello(name: str):
 def add(a: int, b: int):
     return {"sum": a + b}
 
-@app.post("/chat")
-def chat(message: str = Body(...)):
-    return {"you_said": message}
-
 app.include_router(users_router)
+app.include_router(chat_router)
