@@ -66,8 +66,11 @@
 
                 <div class="card" style="--i:4">
                     <h3>/users</h3>
-                    <p class="muted">Returns the current user list payload.</p>
-                    <button class="btn" onclick="postUsers()">Get Users</button>
+                    <div class="field">
+                        <label for="user_id">User ID</label>
+                        <input type="text" id="user_id" placeholder="2">
+                    </div>
+                    <button class="btn" onclick="postUsers()">Get User</button>
                 </div>
             </section>
 
@@ -111,8 +114,13 @@
         }
 
         async function postUsers() {
+            const userId = document.getElementById('user_id').value;
             const response = await fetch('/users', {
-                method: 'POST'
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ user_id: Number(userId) })
             });
             const data = await response.json();
             document.getElementById('response').textContent = JSON.stringify(data, null, 2);
