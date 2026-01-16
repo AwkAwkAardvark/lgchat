@@ -1,7 +1,15 @@
 from fastapi import Body, FastAPI
+from fastapi.staticfiles import StaticFiles
+from starlette.responses import FileResponse
 from app.users import router as users_router
 
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
+
+@app.get("/")
+def read_root():
+    return FileResponse('app/static/index.html')
 
 @app.get("/health")
 def health():
