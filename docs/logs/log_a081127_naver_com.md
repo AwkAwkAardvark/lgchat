@@ -4,9 +4,14 @@
 *(Reserved for future use: languages, formatting, etc.)*
 
 ## Current Task
-- [2026-01-22]: Verified `python-dotenv` installation.
-    - User reported VS Code resolving issue.
-    - Confirmed `python-dotenv` is in `requirements.txt` and installed in `.venv_wsl`.
+- [2026-01-22]: Created `feature/chat-ui-overhaul` branch.
+- [2026-01-22]: Implemented `app/static/chat.html`.
+    - Modern chat interface with sidebar-less design (session ID in header).
+    - Auto-scrolling, loading states, and responsive layout.
+    - Styled with existing `style.css` variables + inline overrides.
+- [2026-01-22]: Resolved `python-dotenv` unresolved reference in VS Code.
+    - User confirmed repair via PowerShell was successful.
+    - VS Code flags have cleared.
 
 
 ## History
