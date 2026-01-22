@@ -4,7 +4,10 @@
 *(Reserved for future use: languages, formatting, etc.)*
 
 ## Current Task
-*(Record individual code changes and steps here as they happen)*
+- [2026-01-22]: Verified `python-dotenv` installation.
+    - User reported VS Code resolving issue.
+    - Confirmed `python-dotenv` is in `requirements.txt` and installed in `.venv_wsl`.
+
 
 ## History
 *(Move completed tasks here - Newest on top)*
