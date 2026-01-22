@@ -58,6 +58,10 @@
                 <div class="card" style="--i:3">
                     <h3>/chat</h3>
                     <div class="field">
+                        <label for="chat_session">Session ID</label>
+                        <input type="text" id="chat_session" placeholder="default">
+                    </div>
+                    <div class="field">
                         <label for="chat_message">Message</label>
                         <input type="text" id="chat_message" placeholder="Hello from the UI">
                     </div>
@@ -102,12 +106,13 @@
 
         async function postChat() {
             const message = document.getElementById('chat_message').value;
+            const sessionId = document.getElementById('chat_session').value || "default";
             const response = await fetch('/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ query: message })
+                body: JSON.stringify({ query: message, session_id: sessionId })
             });
             const data = await response.json();
             document.getElementById('response').textContent = JSON.stringify(data, null, 2);

@@ -58,7 +58,7 @@ def chat(
         # 5. Run
         response = chain.invoke({"input": query})
         
-        return response["response"]
+        return {"response": response["response"]}
 
     except Exception as e:
         logger.exception("Chat processing failed")

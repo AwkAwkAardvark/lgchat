@@ -9,6 +9,11 @@
 ## History
 *(Move completed tasks here - Newest on top)*
 
+### 2026-01-22: UI & Environment Fixes
+- **Frontend**: Added `session_id` input to `index.html` and updated `postChat` payload to match backend.
+- **Backend**: Updated `app/chat.py` to return consistent JSON object `{"response": ...}`.
+- **Environment**: Resolved `uvicorn` path/process issues by switching to a WSL-native virtual environment (`.venv_wsl`).
+
 ### 2026-01-22: Chat Module Implementation
 - **Frontend**: Updated `app/static/index.html` to send correct JSON payload `{query: ...}`.
 - **Backend**: 
