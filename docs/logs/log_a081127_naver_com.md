@@ -15,7 +15,19 @@
 
 
 
+### 2026-01-22: Session Wrap-up
+
+- **UI**: Delivered `chat.html` and verified static file serving.
+
+- **Model**: Switched default to `gpt-o4-mini`.
+
+- **RAG Prep**: Inspected `sample.csv` and identified cleaning requirements for future work.
+
+
+
 ### 2026-01-22: Model Configuration Update
+
+
 
 - **Backend**: Updated default model to `gpt-o4-mini` in `app/settings.py`.
 
