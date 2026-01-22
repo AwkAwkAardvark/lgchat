@@ -21,7 +21,7 @@ def _env_float(key: str, default: float) -> float:
 @dataclass(frozen=True)
 class Settings:
     openai_api_key: Optional[str] = os.getenv("OPENAI_API_KEY")
-    openai_model: str = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+    openai_model: str = os.getenv("OPENAI_MODEL", "gpt-o4-mini")
     openai_base_url: Optional[str] = os.getenv("OPENAI_BASE_URL")
     openai_temperature: float = _env_float("OPENAI_TEMPERATURE", 0.2)
 

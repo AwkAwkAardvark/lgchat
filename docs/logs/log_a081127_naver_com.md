@@ -15,7 +15,15 @@
 
 
 
+### 2026-01-22: Model Configuration Update
+
+- **Backend**: Updated default model to `gpt-o4-mini` in `app/settings.py`.
+
+
+
 ### 2026-01-22: Chat UI & Environment
+
+
 
 - **UI**: Created `app/static/chat.html` with responsive design, session control, and message history.
 
