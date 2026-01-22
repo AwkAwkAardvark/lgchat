@@ -9,6 +9,14 @@
 ## History
 *(Move completed tasks here - Newest on top)*
 
+### 2026-01-22: Chat Module Implementation
+- **Frontend**: Updated `app/static/index.html` to send correct JSON payload `{query: ...}`.
+- **Backend**: 
+    - Implemented `ConversationChain` with `ConversationBufferMemory`.
+    - Added global `CONVERSATIONS` dict for session persistence.
+    - Updated `app/chat.py` to use `langchain_openai` and correct project settings.
+    - Removed RAG dependencies (Chroma) for now as requested.
+
 ### 2026-01-22: Documentation Refactor (Individual Logs)
 - Renamed generic `WORK_LOG.md` to `docs/logs/log_a081127_naver_com.md`.
 - Updated `docs/AGENT_INSTRUCTIONS.md` to define the individual logging workflow and file naming conventions.
