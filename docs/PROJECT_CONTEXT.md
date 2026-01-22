@@ -12,6 +12,7 @@ A chatbot application built with LangChain and FastAPI, capable of RAG (Retrieva
 ## Recent Progress
 *(Newest summaries should be added immediately below this line)*
 
+- **2026-01-22**: Added `app/static/chat.html`, a dedicated, modern UI for the chat functionality with message history and session management. Resolved `python-dotenv` environment issues.
 - **2026-01-22**: Synchronized frontend and backend:
     - Updated `app/static/index.html` to support `session_id` input for stateful chat.
     - Updated `app/chat.py` to return standard JSON objects.
