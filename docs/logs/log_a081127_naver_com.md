@@ -13,7 +13,11 @@
 
 *(Move completed tasks here - Newest on top)*
 
-
+### 2026-01-24: Dockerization (Part 1)
+- **Infrastructure**: Created `Dockerfile` (Python 3.11-slim) and `docker-compose.yml` with persistent volume mounts for data.
+- **Environment**: Diagnosed and resolved WSL 2 Docker permission issues (requires enabling WSL integration in Docker Desktop).
+- **Build**: Successfully built the Docker image `langchat-app`.
+- **Status**: Ready to launch (`docker compose up`).
 
 ### 2026-01-22: Session Wrap-up
 

@@ -11,9 +11,10 @@ A chatbot application built with LangChain and FastAPI, capable of RAG (Retrieva
 
 ## Roadmap / Active Tasks
 - [ ] **Dockerization**
-    - [ ] Create `Dockerfile` (Python 3.11-slim, multi-stage if needed).
-    - [ ] Create `docker-compose.yml` (Volume mounts for persistence).
-    - [ ] Verify local container launch (`docker compose up`).
+    - [x] Create `Dockerfile` (Python 3.11-slim, multi-stage if needed).
+    - [x] Create `docker-compose.yml` (Volume mounts for persistence).
+    - [x] Build local image (Success).
+    - [ ] Launch container (`docker compose up`) and verify.
 - [ ] **Remote Access (Post-Docker)**
     - [ ] Set up Cloudflare Tunnel (sidecar container).
     - [ ] Configure Cloudflare Access for authentication.
@@ -21,6 +22,7 @@ A chatbot application built with LangChain and FastAPI, capable of RAG (Retrieva
 ## Recent Progress
 *(Newest summaries should be added immediately below this line)*
 
+- **2026-01-24**: Implemented Docker infrastructure (`Dockerfile`, `docker-compose.yml`) and successfully built the image after resolving WSL integration issues. Ready for initial launch.
 - **2026-01-22**: Finalized session: Modern chat UI (`chat.html`) is live, `python-dotenv` environment issues resolved, and default model updated to `gpt-o4-mini`. Evaluated `sample.csv` for future RAG implementation.
 - **2026-01-22**: Updated default OpenAI model to `gpt-o4-mini` in `app/settings.py`.
 - **2026-01-22**: Added `app/static/chat.html`, a dedicated, modern UI for the chat functionality with message history and session management. Resolved `python-dotenv` environment issues.
