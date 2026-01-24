@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount the 'data' folder from host to container for persistent storage
+      - ./data:/data
+    environment:
+      # Pass through the API key from your host shell or .env file
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      # Configure app to use the mounted volume
+      - CSV_ROOT=/data
+      - PERSIST_ROOT=/data/chroma_db
