@@ -10,11 +10,11 @@ A chatbot application built with LangChain and FastAPI, capable of RAG (Retrieva
 *   **Environment:** Linux (WSL), Git
 
 ## Roadmap / Active Tasks
-- [ ] **Dockerization**
+- [x] **Dockerization**
     - [x] Create `Dockerfile` (Python 3.11-slim, multi-stage if needed).
     - [x] Create `docker-compose.yml` (Volume mounts for persistence).
     - [x] Build local image (Success).
-    - [ ] Launch container (`docker compose up`) and verify.
+    - [x] Launch container (`docker compose up`) and verify (Success).
 - [ ] **Remote Access (Post-Docker)**
     - [ ] Set up Cloudflare Tunnel (sidecar container).
     - [ ] Configure Cloudflare Access for authentication.
